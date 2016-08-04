@@ -1,6 +1,6 @@
 <?php namespace Illuminate\Exception;
 
-use Exception;
+use Throwable;
 use Symfony\Component\Debug\ExceptionHandler;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
@@ -39,7 +39,7 @@ class SymfonyDisplayer implements ExceptionDisplayerInterface {
 	 * @param  \Exception  $exception
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */
-	public function display(Exception $exception)
+	public function display(Throwable $exception)
 	{
 		if ($this->returnJson)
 		{
